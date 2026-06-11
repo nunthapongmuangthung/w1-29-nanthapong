@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ระบบคำนวณสูตรคูณ (For Loop)</title>
+    <title>ระบบคำนวณสูตรคูณ (While Loop)</title>
 
     <style>
-        /* จัดวางตำแหน่งหน้าเว็บให้อยู่ตรงกลาง */
+        /* จัดวางองค์ประกอบให้อยู่กึ่งกลางหน้าจอ */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #faf8f5;
@@ -17,7 +17,7 @@
             justify-content: center;
         }
 
-        /* กล่องการ์ดหลัก */
+        /* กล่องการ์ดเนื้อหาหลัก */
         .main-card {
             background: #ffffff;
             padding: 30px;
@@ -28,7 +28,7 @@
             max-width: 400px;
         }
 
-        /* หัวข้อ */
+        /* หัวข้อสีม่วง */
         .header-title {
             color: purple;
             font-size: 20px;
@@ -38,7 +38,7 @@
             margin-bottom: 8px;
         }
 
-        /* ปุ่มลิงก์เปลี่ยนหน้า */
+        /* ปุ่มลิงก์สลับหน้า */
         .btn-link {
             display: block;
             text-align: center;
@@ -64,7 +64,7 @@
         label {
             font-weight: 600;
             font-size: 14px;
-            color: #444
+            color: #444;
         }
 
         input[type="number"] {
@@ -93,7 +93,7 @@
         }
 
         input[type="submit"]:hover {
-            background-color: #300053;
+            background-color: #c59ae3;
         }
 
         /* กล่องแสดงผลลัพธ์ */
@@ -123,10 +123,10 @@
         echo "<h1 class='header-title'>งานที่ 1 นันทพงศ์ ม่วงทุ่ง BIT2/4 เลขที่ 29</h1>";
         ?>
 
-        <a href="while.php" class="btn-link">While Loop</a>
+        <a href="index.php" class="btn-link">Go to For Loop</a>
 
         <form action="" method="get">
-            <label for="num">เลขแม่สูตรคูณ</label>
+            <label for="num">เลขแม่สูตรคูณ (While Loop)</label>
 
             <input
                 type="number"
@@ -147,8 +147,12 @@
             echo "<div class='result-container'>";
             echo "<div class='result-header'>สูตรคูณแม่ $num</div>";
 
-            for ($i = 1; $i <= 12; $i++) {
+            // โครงสร้าง While Loop
+            $i = 1;
+
+            while ($i <= 12) {
                 echo $num . " x " . $i . " = " . ($num * $i) . "<br>";
+                $i++;
             }
 
             echo "</div>";
@@ -159,4 +163,3 @@
 
 </body>
 </html>
-
